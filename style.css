@@ -19,7 +19,6 @@ body {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 10px;
     background: rgba(0, 0, 0, 1); /* Preto com 60% de transparência */
-    padding: 0;
     border-radius: 15px;
     opacity: 0.8;
     z-index: 10;
@@ -29,6 +28,7 @@ body {
     align-items: center;
     justify-content: space-between; /* Alinha o conteúdo entre os dois lados */
     padding: 0 20px; /* Espaçamento interno */
+    height: 100px;
 }
 
 nav {
@@ -312,7 +312,7 @@ audio {
 .quem-somos {
 
     text-align: center;
-    height: 70%;
+    height: 60%;
     margin-right: 5px;
 
 }
@@ -328,6 +328,7 @@ audio {
     width:50%;
     height: auto;
     margin-left: 5px;
+    border-radius: 10%;
 }
 
 .botao-padrao{
@@ -345,3 +346,30 @@ audio {
     color: white;
 
 }
+
+.servico-lista{
+    font-size: 15px;
+    display: list-item;
+    text-align: left;
+
+}
+
+
+.conteiner-servico{
+    margin-top: 8%;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 31%;
+    padding: 10px;
+}
+
+.titulo-servico{
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+
+.item-servico{
+    margin-top: 5px;
+    list-style-type: disc;
+}
+
