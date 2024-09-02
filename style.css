@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Plus Jakarta Sans", sans-serif;
+}
+
+.floating-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    width: 80%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 10px;
+    background: rgba(0, 0, 0, 1); /* Preto com 60% de transparência */
+    padding: 0;
+    border-radius: 15px;
+    opacity: 0.8;
+    z-index: 10;
+    height: 80px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha o conteúdo entre os dois lados */
+    padding: 0 20px; /* Espaçamento interno */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos dentro do nav */
+    width: 100%;
+    align-items: center;
+}
+
+.name_intersect {
+    margin: 0;
+    font-size: 1em; /* Ajuste o tamanho conforme necessário */
+    color: white; /* Cor do texto */
+    font-family: "HighCruiser", sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin-left: 40pxpx;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+ul li {
+    margin: 0;
+    margin-left: 50px;
+    font-size: 1.5em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+}
+
+ul li a:hover {
+    background: linear-gradient(
+            to right,
+            #c7798a,
+            #995ed1,
+            #469fe1,
+            #7571e7,
+            #44b2d9,
+            #43d798
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid white; /* Borda branca inicial */
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center; /* Alinha o texto no centro */
+    text-decoration: none; /* Remove o sublinhado do texto */
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.contact-button:hover {
+    background: white;
+    border: 2px solid white; /* Borda branca inicial */
+    color: black; /* Cor do texto no hover */
+}
+
+.logo_header{
+    margin-left: 15px;
+}
+
+.header_logo {
+    font-size: 10px;
+    color: white;
+    letter-spacing: 15px;
+    font-family: "HighCruiser", sans-serif;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    animation: move 2s ease-in-out forwards;
+    opacity: 0.88;
+}
+
+.top {
+    top: 10%;
+    left: 50%;
+    animation-name: move-top ;
+    transform: translate(-50%, 0);
+    background: linear-gradient(
+            to top right,
+            #7571e7,
+            #44b2d9,
+            #43d798);
+    z-index: 1;
+}
+
+.bottom.left {
+    bottom: 10%;
+    left: 10%;
+    animation-name: move-left;
+    background: linear-gradient(
+            to top right,
+            #c7798a,
+            #995ed1,
+            #469fe1);
+    z-index: 2;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.bottom.right {
+    bottom: 10%;
+    right: 10%;
+    animation-name: move-right;
+    background: linear-gradient(
+            to top right,
+            #913ab9,
+            #4362df,
+            #29b8a6);
+    z-index: 0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.text_container {
+    margin-top: 200px;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInText 2s ease-in-out forwards; /* Animação para o texto */
+}
+
+.name_logo,
+.slogan {
+    font-family: "HighCruiser", sans-serif;
+    text-align: center;
+}
+
+.name_logo {
+    letter-spacing: 15px;
+    font-size: medium;
+    margin-bottom: 2px;
+}
+
+.slogan {
+    font-size: 7px;
+    letter-spacing: 10px;
+    margin-top: 0px;
+    background: linear-gradient(
+            to right,
+            #c7798a,
+            #995ed1,
+            #469fe1,
+            #7571e7,
+            #44b2d9,
+            #43d798
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header_slogan {
+    font-size: 5px;
+}
+
+@font-face {
+    font-family: "HighCruiser";
+    src: url("fonts/HighCruiser-PersonalUseOnly.otf") format("opentype");
+}
+
+@keyframes move-top {
+    0% {
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+}
+
+@keyframes move-left {
+    0% {
+        bottom: 10%;
+        left: 10%;
+        transform: translate(0, 0);
+    }
+    100% {
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-80%, 50%);
+    }
+}
+
+@keyframes move-right {
+    0% {
+        bottom: 10%;
+        right: 10%;
+        transform: translate(0, 0);
+    }
+    100% {
+        bottom: 50%;
+        right: 50%;
+        transform: translate(80%, 50%);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    /* Mantém invisível até as circunferências quase se juntarem */
+    100% {
+        opacity: 1;
+    }
+    /* Gradualmente torna visível */
+}
+
+.elemento {
+    animation: move-top 0.5s ease-in-out forwards,
+    move-left 1s ease-in-out forwards,
+    move-right 1s ease-in-out forwards;
+}
+
+audio {
+    display: none; /* Oculta o elemento de áudio */
+}
+
+.corpo-texto {
+    position: absolute;
+    top: 70%; /* Ajuste conforme necessário */
+    width: 80%;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    z-index: 1;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.conteudo-lado-a-lado {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.frase_efeito {
+    font-size: 1.5em;
+}
+.titulo2{
+    margin-top: 8%;
+    font-size: 30px;
+}
+
+.texto-padrão{
+
+    font-size: 20px ;
+    text-align: center;
+}
+.quem-somos {
+
+    text-align: center;
+    height: 70%;
+    margin-right: 5px;
+
+}
+
+.conjunto_texto{
+    width: 50%;
+    margin-top: 8%;
+    margin-right: 10px;
+}
+
+.imagem-equipe {
+    margin-top: 8%;
+    width:50%;
+    height: auto;
+    margin-left: 5px;
+}
+
+.botao-padrao{
+    height: 30px;
+    align-content: center;
+    color: black;
+    border-color: black;
+    font-size: 14px;
+    font-family:"Plus Jakarta Sans", sans-serif ;
+
+}
+
+.botao-padrao:hover{
+    background-color: black;
+    color: white;
+
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+          rel="stylesheet">
+
+
+</head>
+
+<body>
+<header class="floating-header">
+    <nav>
+        <div class="logo_header">
+            <h1 class="header_logo name_intersect ">INTERSECT </h1>
+            <h1 class="header_slogan slogan">TECHNOLOGIES</h1>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Nossos Serviços</a></li>
+        </ul>
+        <a href="#" class="contact-button">Contate-nos</a>
+    </nav>
+</header>
+
+<div class="circles_container">
+    <div class="circle top"></div>
+    <div class="circle bottom left"></div>
+    <div class="circle bottom right"></div>
+</div>
+<div class="text_container">
+    <p class="name_logo">INTERSECT</p>
+    <p class="slogan">TECHNOLOGIES</p>
+</div>
+<div class="corpo-texto">
+    <h1 class="frase_efeito">TRANSFORMANDO SEUS PROJETOS EM REALIDADE</h1>
+
+    <div class="conteudo">
+
+        <div class="conteudo-lado-a-lado ">
+            <div class="conjunto_texto">
+                <h2 class="titulo2">Quem Somos?</h2>
+                <p class="quem-somos texto-padrão">
+                    Na Intersect, somos mais do que uma empresa  - somos um movimento para unir talentos e oportunidades no
+                    mundo da tecnologia e design. Combinando os conhecimentos dos alunos dos cursos de Ciência da Computação,
+                    Sistema da Informação e Design da Universidade Federal da Paraíba, estamos contribuindo ativamente para o futuro
+                    do mercado digital. <br> Nosso propósito é claro: fornecer soluções inovadoras e personalizadas que integram
+                    tecnologia da informação, estratégia e inteligência, impulsionando o sucesso e a eficiência de nossos clientes.
+                    Além disso, capacitamos os alunos com experiências práticas para o mercado de trabalho. Estamos aqui para ajudar
+                    pequenas empresas a marcarem presença online e oferecer análises de dados precisas e importantes.
+                </p>
+                <a href="" class="botao-padrao contact-button ">Saiba mais</a>
+            </div>
+            <img class="imagem-equipe" src="images/imagem-desenvolvedores.jpg" alt="">
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+<audio id="effect-sound" src="effect/efeito1.mp3"></audio>
+
+    <script>
+        window.addEventListener('load', () => {
+        const header = document.querySelector('.floating-header');
+        setTimeout(() => {
+        header.classList.add('animate');
+    }, 10); // Pequeno atraso para garantir que a animação comece após o carregamento
+    });
+</script>
+
+
+
+</body>
+
+</html>
